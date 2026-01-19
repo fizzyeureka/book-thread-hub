@@ -227,13 +227,58 @@ const AVATAR_CHARACTERS: Record<string, AvatarCharacter> = {
     traits: ["Observant", "Wise", "Unassuming"],
     book: "Miss Marple Series"
   },
-  // Community champion - Gandalf
+  // Community champions - Based on engagement levels
   community_champion: {
     name: "Gandalf",
     image: "https://upload.wikimedia.org/wikipedia/en/e/e9/Gandalf600ppx.jpg",
-    description: "A wise guide like Gandalf! Your high engagement shows your passion for bringing readers together and guiding others on their literary journeys.",
+    description: "A wise guide like Gandalf! Your exceptional engagement shows your passion for bringing readers together and guiding others on their literary journeys.",
     traits: ["Wise", "Inspiring", "Leader"],
     book: "The Lord of the Rings"
+  },
+  community_mentor: {
+    name: "Dumbledore",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Dumbledore_-_Michael_Gambon.jpg/220px-Dumbledore_-_Michael_Gambon.jpg",
+    description: "A beloved mentor like Dumbledore! Your guidance and wisdom make you a beacon for fellow readers seeking literary enlightenment.",
+    traits: ["Wise", "Patient", "Mysterious"],
+    book: "Harry Potter Series"
+  },
+  community_rising: {
+    name: "Samwise Gamgee",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e7/Sean_Astin_as_Samwise_Gamgee.png/220px-Sean_Astin_as_Samwise_Gamgee.png",
+    description: "A loyal companion like Sam! Your growing engagement shows true dedication to the reading community.",
+    traits: ["Loyal", "Brave", "Supportive"],
+    book: "The Lord of the Rings"
+  },
+  community_newcomer: {
+    name: "Bilbo Baggins",
+    image: "https://upload.wikimedia.org/wikipedia/en/0/0f/Bilbo_Baggins_from_The_Hobbit_Trilogy.jpg",
+    description: "An unexpected adventurer like Bilbo! You're just beginning your literary journey, but great things await.",
+    traits: ["Curious", "Brave", "Growing"],
+    book: "The Hobbit"
+  },
+  // Super engaged - thread creators
+  discussion_leader: {
+    name: "Socrates",
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Socrates_Louvre.jpg",
+    description: "A great questioner like Socrates! Your many discussions inspire deep thinking and intellectual discourse.",
+    traits: ["Philosophical", "Questioning", "Wise"],
+    book: "Plato's Dialogues"
+  },
+  // Vote enthusiasts
+  vote_enthusiast: {
+    name: "Oscar Wilde",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Oscar_Wilde_portrait.jpg",
+    description: "A critic with impeccable taste like Oscar Wilde! Your votes shape the community's reading landscape.",
+    traits: ["Discerning", "Witty", "Influential"],
+    book: "The Picture of Dorian Gray"
+  },
+  // Book curators
+  book_curator: {
+    name: "Jorge Luis Borges",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Jorge_Luis_Borges_1951%2C_by_Grete_Stern.jpg",
+    description: "A master librarian like Borges! Your book contributions build an infinite library of wonder.",
+    traits: ["Scholarly", "Imaginative", "Curator"],
+    book: "The Library of Babel"
   },
   // Children's classics
   childrens_dreamer: {
@@ -474,39 +519,269 @@ const AVATAR_CHARACTERS: Record<string, AvatarCharacter> = {
     description: "A voracious reader like Hermione Granger! Your diverse reading habits show your incredible thirst for knowledge and ability to find wisdom in every genre.",
     traits: ["Brilliant", "Studious", "Loyal"],
     book: "Harry Potter Series"
+  },
+  // Additional Fantasy Characters
+  fantasy_witch: {
+    name: "Ged (Sparrowhawk)",
+    image: "https://upload.wikimedia.org/wikipedia/en/3/3d/A_Wizard_of_Earthsea%2C_first_hardcover_edition.jpg",
+    description: "A true namer like Ged! Your fantasy taste reveals understanding of language's power and shadow integration.",
+    traits: ["Wise", "Powerful", "Humble"],
+    book: "A Wizard of Earthsea"
+  },
+  fantasy_hobbit: {
+    name: "Samwise Gamgee",
+    image: "https://upload.wikimedia.org/wikipedia/en/e/e7/Sean_Astin_as_Samwise_Gamgee.png",
+    description: "The truest hero like Sam! Your fantasy taste shows loyalty, hope, and the strength of simple courage.",
+    traits: ["Loyal", "Hopeful", "Brave"],
+    book: "The Lord of the Rings"
+  },
+  // Additional Romance Characters
+  romance_rebel: {
+    name: "Marianne Dashwood",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9b/JaneAusten.jpg",
+    description: "A passionate romantic like Marianne! Your heart leads your reading journey with intensity.",
+    traits: ["Passionate", "Expressive", "Romantic"],
+    book: "Sense and Sensibility"
+  },
+  romance_diplomat: {
+    name: "Count Vronsky",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Anna_Karenina_1877_cover.jpg",
+    description: "A passionate pursuer like Vronsky! Your romantic taste shows intensity and devotion.",
+    traits: ["Passionate", "Bold", "Devoted"],
+    book: "Anna Karenina"
+  },
+  // Additional Mystery Characters
+  mystery_professor: {
+    name: "Professor Moriarty",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Sherlock_Holmes_Portrait_Paget.jpg",
+    description: "A mastermind like Moriarty! Your love for mystery shows appreciation for genius-level scheming.",
+    traits: ["Genius", "Strategic", "Formidable"],
+    book: "Sherlock Holmes Series"
+  },
+  mystery_noir: {
+    name: "Philip Marlowe",
+    image: "https://upload.wikimedia.org/wikipedia/en/2/27/The_Big_Sleep_%281939_novel%29_1st_ed_cover.jpg",
+    description: "A hardboiled detective like Marlowe! Your mystery taste shows grit and moral complexity.",
+    traits: ["Tough", "Honorable", "Cynical"],
+    book: "The Big Sleep"
+  },
+  // Additional Sci-Fi Characters
+  scifi_captain: {
+    name: "Captain Nemo",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Jules_Verne.jpg",
+    description: "A visionary explorer like Captain Nemo! Your sci-fi taste shows love for innovation and mystery.",
+    traits: ["Visionary", "Mysterious", "Independent"],
+    book: "Twenty Thousand Leagues Under the Sea"
+  },
+  scifi_rebel: {
+    name: "Neo",
+    image: "https://upload.wikimedia.org/wikipedia/en/c/c5/The_Matrix_Poster.jpg",
+    description: "A chosen one like Neo! Your sci-fi taste reveals questioning of reality and hidden potential.",
+    traits: ["Awakened", "Powerful", "Questioning"],
+    book: "The Matrix (Inspired)"
+  },
+  // Additional Horror Characters
+  horror_writer: {
+    name: "Jack Torrance",
+    image: "https://upload.wikimedia.org/wikipedia/en/4/4a/The_Shining_%281977%29_front_cover%2C_first_edition.jpg",
+    description: "A haunted soul like Jack! Your horror taste shows fascination with isolation and madness.",
+    traits: ["Creative", "Obsessive", "Haunted"],
+    book: "The Shining"
+  },
+  horror_survivor: {
+    name: "Clarice Starling",
+    image: "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg",
+    description: "A brave agent like Clarice! Your thriller taste shows courage to face the darkest minds.",
+    traits: ["Brave", "Intuitive", "Determined"],
+    book: "The Silence of the Lambs"
+  },
+  // Additional Adventure Characters
+  adventure_archaeologist: {
+    name: "Indiana Jones",
+    image: "https://upload.wikimedia.org/wikipedia/en/8/8e/Indiana_Jones_in_Raiders_of_the_Lost_Ark.jpg",
+    description: "An artifact hunter like Indy! Your adventure taste reveals love for history and daring expeditions.",
+    traits: ["Adventurous", "Scholarly", "Daring"],
+    book: "Indiana Jones Adventures"
+  },
+  adventure_captain: {
+    name: "Long John Silver",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Treasure_Island-Scribner%27s-1911.jpg",
+    description: "A charming rogue like Long John! Your adventure taste shows appreciation for cunning and ambiguity.",
+    traits: ["Cunning", "Charismatic", "Complex"],
+    book: "Treasure Island"
+  },
+  // Philosophical Readers
+  philosophy_stoic: {
+    name: "Marcus Aurelius",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Marcus_Aurelius_Glyptothek_Munich.jpg",
+    description: "A philosopher-king like Marcus Aurelius! Your reading reveals commitment to virtue and self-mastery.",
+    traits: ["Stoic", "Wise", "Disciplined"],
+    book: "Meditations"
+  },
+  philosophy_existentialist: {
+    name: "Meursault",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fc/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg",
+    description: "An honest outsider like Meursault! Your reading shows confrontation with life's absurdity.",
+    traits: ["Honest", "Detached", "Authentic"],
+    book: "The Stranger"
+  },
+  // Contemporary Fiction
+  contemporary_observer: {
+    name: "Nick Carraway",
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/The_Great_Gatsby_Cover_1925_Retouched.jpg",
+    description: "A reserved observer like Nick! Your reading shows appreciation for witnessing extraordinary lives.",
+    traits: ["Observant", "Honest", "Reflective"],
+    book: "The Great Gatsby"
+  },
+  // World Literature
+  world_traveler: {
+    name: "Phileas Fogg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Jules_Verne.jpg",
+    description: "A precise adventurer like Phileas Fogg! Your reading spans the world with clockwork precision.",
+    traits: ["Precise", "Adventurous", "Determined"],
+    book: "Around the World in Eighty Days"
+  },
+  world_wanderer: {
+    name: "The Little Prince",
+    image: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG",
+    description: "A wise traveler like the Little Prince! Your reading reveals childlike wonder and profound wisdom.",
+    traits: ["Wise", "Innocent", "Loving"],
+    book: "The Little Prince"
+  },
+  // Psychological Fiction
+  psychological_narrator: {
+    name: "Humbert Humbert",
+    image: "https://upload.wikimedia.org/wikipedia/en/2/2e/Lolita_1955.JPG",
+    description: "An unreliable narrator! Your psychological taste shows appreciation for complex, morally ambiguous storytelling.",
+    traits: ["Complex", "Literary", "Unreliable"],
+    book: "Lolita"
+  },
+  psychological_split: {
+    name: "The Narrator (Fight Club)",
+    image: "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg",
+    description: "A questioning self like the Narrator! Your reading reveals exploration of identity and society.",
+    traits: ["Conflicted", "Rebellious", "Searching"],
+    book: "Fight Club"
+  },
+  // Satire
+  satire_observer: {
+    name: "Gulliver",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Gullivers_travels.jpg",
+    description: "A bewildered traveler like Gulliver! Your satirical taste reveals sharp observation of human folly.",
+    traits: ["Observant", "Naive", "Critical"],
+    book: "Gulliver's Travels"
+  },
+  satire_rebel: {
+    name: "Yossarian",
+    image: "https://upload.wikimedia.org/wikipedia/en/9/99/Catch22.jpg",
+    description: "A sane man in an insane world like Yossarian! Your reading shows appreciation for absurdist humor.",
+    traits: ["Survivor", "Sane", "Rebellious"],
+    book: "Catch-22"
+  },
+  // Feminist Literature
+  feminist_voice: {
+    name: "Celie",
+    image: "https://upload.wikimedia.org/wikipedia/en/6/69/Colorpurple.jpg",
+    description: "A survivor who found her voice like Celie! Your reading shows appreciation for resilience and sisterhood.",
+    traits: ["Resilient", "Growing", "Loving"],
+    book: "The Color Purple"
+  },
+  feminist_warrior: {
+    name: "Offred",
+    image: "https://upload.wikimedia.org/wikipedia/en/1/18/TheHandmaidsTale%281stEd%29.jpg",
+    description: "A survivor like Offred! Your reading reveals concern for women's rights and bodily autonomy.",
+    traits: ["Survivor", "Observant", "Resistant"],
+    book: "The Handmaid's Tale"
+  },
+  // African Literature
+  african_warrior: {
+    name: "Okonkwo",
+    image: "https://upload.wikimedia.org/wikipedia/en/6/65/ThingsFallApart.jpg",
+    description: "A tragic hero like Okonkwo! Your reading shows engagement with colonialism and cultural change.",
+    traits: ["Strong", "Proud", "Tragic"],
+    book: "Things Fall Apart"
+  },
+  // Latin American Literature
+  latin_magical: {
+    name: "Colonel Aureliano Buendía",
+    image: "https://upload.wikimedia.org/wikipedia/en/a/a9/Cien_a%C3%B1os_de_soledad_%28book_cover%2C_1967%29.jpg",
+    description: "A legendary figure like Colonel Buendía! Your taste reveals love for sweeping family sagas and magical realism.",
+    traits: ["Revolutionary", "Solitary", "Legendary"],
+    book: "One Hundred Years of Solitude"
+  },
+  // Indian Literature
+  indian_dreamer: {
+    name: "Saleem Sinai",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/SalmanRushdieMidnightsChildren.jpg/220px-SalmanRushdieMidnightsChildren.jpg",
+    description: "A midnight child like Saleem! Your reading reveals love for India's complexity and magical history.",
+    traits: ["Telepathic", "Nostalgic", "Complex"],
+    book: "Midnight's Children"
+  },
+  // Graphic Novel Enthusiast
+  graphic_hero: {
+    name: "Rorschach",
+    image: "https://upload.wikimedia.org/wikipedia/en/a/a2/Watchmen%2C_issue_1.jpg",
+    description: "An uncompromising vigilante like Rorschach! Your reading shows appreciation for moral complexity in visual storytelling.",
+    traits: ["Uncompromising", "Dark", "Determined"],
+    book: "Watchmen"
+  },
+  graphic_dreamer: {
+    name: "Morpheus (Dream)",
+    image: "https://upload.wikimedia.org/wikipedia/en/5/5a/Sandman1989.png",
+    description: "The Lord of Dreams like Morpheus! Your reading reveals love for mythology and the power of stories.",
+    traits: ["Mysterious", "Powerful", "Storyteller"],
+    book: "The Sandman"
   }
 };
 
-const GENRE_MAPPING: Record<string, string> = {
-  'fantasy': 'fantasy_explorer',
-  'romance': 'romance_poet',
-  'mystery': 'mystery_detective',
-  'thriller': 'mystery_detective',
-  'science fiction': 'scifi_voyager',
-  'sci-fi': 'scifi_voyager',
-  'non-fiction': 'knowledge_seeker',
-  'self-help': 'knowledge_seeker',
-  'philosophy': 'knowledge_seeker',
-  'horror': 'shadow_walker',
-  'gothic': 'shadow_walker',
-  'historical fiction': 'time_traveler',
-  'history': 'time_traveler',
-  'biography': 'memoir_chronicler',
-  'adventure': 'adventure_seeker',
-  'action': 'adventure_seeker',
-  'literary fiction': 'literary_artist',
-  'classics': 'literary_artist',
-  'comedy': 'comedy_jester',
-  'humor': 'comedy_jester',
-  'satire': 'comedy_jester',
-  'young adult': 'young_adult_hero',
-  'ya': 'young_adult_hero',
-  'dystopian': 'young_adult_hero',
-  'poetry': 'poetry_muse',
-  'memoir': 'memoir_chronicler',
-  'autobiography': 'memoir_chronicler',
-  'crime': 'crime_solver',
-  'detective': 'crime_solver',
+const GENRE_MAPPING: Record<string, string[]> = {
+  'fantasy': ['fantasy_explorer', 'fantasy_wizard', 'fantasy_queen', 'fantasy_knight', 'fantasy_assassin', 'fantasy_witch', 'fantasy_hobbit'],
+  'romance': ['romance_poet', 'romance_dreamer', 'romance_rebel', 'romance_diplomat'],
+  'mystery': ['mystery_detective', 'mystery_sleuth', 'mystery_professor', 'mystery_noir'],
+  'thriller': ['thriller_spy', 'thriller_investigator', 'horror_survivor'],
+  'science fiction': ['scifi_voyager', 'scifi_pioneer', 'scifi_android', 'scifi_pilot', 'scifi_captain', 'scifi_rebel'],
+  'sci-fi': ['scifi_voyager', 'scifi_pioneer', 'scifi_android', 'scifi_captain'],
+  'non-fiction': ['knowledge_seeker', 'knowledge_philosopher', 'philosophy_stoic'],
+  'self-help': ['knowledge_seeker', 'philosophy_stoic', 'philosophy_existentialist'],
+  'philosophy': ['knowledge_philosopher', 'philosophy_stoic', 'philosophy_existentialist'],
+  'horror': ['shadow_walker', 'horror_hunter', 'gothic_count', 'gothic_doctor', 'horror_writer'],
+  'gothic': ['gothic_romantic', 'gothic_heroine', 'gothic_count', 'gothic_doctor'],
+  'historical fiction': ['time_traveler', 'time_warrior', 'classic_gentleman', 'classic_dreamer'],
+  'history': ['time_traveler', 'memoir_chronicler', 'epic_warrior', 'epic_voyager'],
+  'biography': ['memoir_chronicler', 'contemporary_observer'],
+  'adventure': ['adventure_seeker', 'adventure_explorer', 'adventure_pirate', 'adventure_archaeologist', 'adventure_captain'],
+  'action': ['adventure_seeker', 'thriller_spy', 'epic_warrior'],
+  'literary fiction': ['literary_artist', 'literary_rebel', 'contemporary_observer', 'russian_soul'],
+  'classics': ['literary_artist', 'classic_gentleman', 'classic_dreamer', 'russian_prince', 'russian_aristocrat'],
+  'comedy': ['comedy_jester', 'comedy_wit', 'humor_eccentric', 'satire_observer', 'satire_rebel'],
+  'humor': ['comedy_jester', 'comedy_wit', 'humor_eccentric'],
+  'satire': ['satire_observer', 'satire_rebel', 'comedy_jester'],
+  'young adult': ['young_adult_hero', 'young_adult_wizard', 'young_adult_rebel'],
+  'ya': ['young_adult_hero', 'young_adult_wizard', 'young_adult_rebel'],
+  'dystopian': ['dystopia_rebel', 'dystopia_savage', 'young_adult_hero', 'feminist_warrior'],
+  'poetry': ['poetry_muse', 'poetry_romantic'],
+  'memoir': ['memoir_chronicler', 'feminist_voice'],
+  'autobiography': ['memoir_chronicler'],
+  'crime': ['crime_solver', 'crime_mastermind', 'mystery_noir'],
+  'detective': ['crime_solver', 'mystery_detective', 'mystery_sleuth'],
+  'children': ['childrens_dreamer', 'childrens_hero', 'childrens_wizard', 'childrens_bear', 'childrens_orphan', 'world_wanderer'],
+  'magical realism': ['magical_realist', 'latin_magical'],
+  'japanese': ['japanese_wanderer', 'japanese_prince'],
+  'russian': ['russian_soul', 'russian_prince', 'russian_aristocrat'],
+  'american': ['american_captain', 'american_rebel'],
+  'psychological': ['psychological_narrator', 'psychological_split'],
+  'feminist': ['feminist_voice', 'feminist_warrior'],
+  'african': ['african_warrior'],
+  'graphic novel': ['graphic_hero', 'graphic_dreamer'],
+  'comics': ['graphic_hero', 'graphic_dreamer'],
+  'world literature': ['world_traveler', 'world_wanderer', 'indian_dreamer'],
+  'epic': ['epic_warrior', 'epic_voyager'],
+};
+
+// Function to get a character from array based on user engagement for variety
+const getCharacterFromArray = (keys: string[], seed: number): string => {
+  const index = seed % keys.length;
+  return keys[index];
 };
 
 export const useAvatarCard = (userId: string | undefined) => {
@@ -605,21 +880,59 @@ export const useAvatarCard = (userId: string | undefined) => {
         }
       });
 
-      // Check for high engagement (community champion)
+      // Calculate engagement metrics for avatar selection
       const totalEngagement = (threadCount || 0) + (voteCount || 0) + (userBooks?.length || 0);
-      if (totalEngagement >= 20) {
+      const booksCount = userBooks?.length || 0;
+      const threadsCount = threadCount || 0;
+      const votesCount = voteCount || 0;
+
+      // Create a seed from user engagement for consistent but varied results
+      const engagementSeed = booksCount * 7 + threadsCount * 13 + votesCount * 3;
+
+      // Check for engagement-based avatars first (tiered system)
+      if (totalEngagement >= 50) {
+        // Legend tier - Master guide
         setCharacter(AVATAR_CHARACTERS.community_champion);
+      } else if (totalEngagement >= 30) {
+        // Mentor tier
+        setCharacter(AVATAR_CHARACTERS.community_mentor);
+      } else if (threadsCount >= 10) {
+        // Discussion leader - many threads
+        setCharacter(AVATAR_CHARACTERS.discussion_leader);
+      } else if (votesCount >= 20) {
+        // Vote enthusiast - many votes
+        setCharacter(AVATAR_CHARACTERS.vote_enthusiast);
+      } else if (booksCount >= 10) {
+        // Book curator - many books added
+        setCharacter(AVATAR_CHARACTERS.book_curator);
+      } else if (totalEngagement >= 10) {
+        // Rising community member
+        setCharacter(AVATAR_CHARACTERS.community_rising);
       } else if (dominantGenre && GENRE_MAPPING[dominantGenre]) {
-        setCharacter(AVATAR_CHARACTERS[GENRE_MAPPING[dominantGenre]]);
+        // Genre-based avatar with variety
+        const genreKeys = GENRE_MAPPING[dominantGenre];
+        const characterKey = getCharacterFromArray(genreKeys, engagementSeed);
+        setCharacter(AVATAR_CHARACTERS[characterKey]);
       } else if (profile?.favorite_genre) {
-        const favoriteKey = GENRE_MAPPING[profile.favorite_genre.toLowerCase()];
-        if (favoriteKey) {
-          setCharacter(AVATAR_CHARACTERS[favoriteKey]);
+        const genreKeys = GENRE_MAPPING[profile.favorite_genre.toLowerCase()];
+        if (genreKeys) {
+          const characterKey = getCharacterFromArray(genreKeys, engagementSeed);
+          setCharacter(AVATAR_CHARACTERS[characterKey]);
+        } else {
+          // New user - newcomer avatar
+          if (totalEngagement >= 1) {
+            setCharacter(AVATAR_CHARACTERS.community_newcomer);
+          } else {
+            setCharacter(AVATAR_CHARACTERS.balanced_reader);
+          }
+        }
+      } else {
+        // Completely new user
+        if (totalEngagement >= 1) {
+          setCharacter(AVATAR_CHARACTERS.community_newcomer);
         } else {
           setCharacter(AVATAR_CHARACTERS.balanced_reader);
         }
-      } else {
-        setCharacter(AVATAR_CHARACTERS.balanced_reader);
       }
     } catch (error) {
       console.error('Error calculating avatar:', error);
